@@ -6,6 +6,7 @@ import { Menu, X, Moon, Sun, Monitor, Droplets, Droplet } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -39,6 +40,7 @@ export function Navbar() {
   ] as const;
 
   return (
+    <>
     <nav
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
@@ -189,5 +191,6 @@ export function Navbar() {
         </div>
       )}
     </nav>
+    </>
   );
 }

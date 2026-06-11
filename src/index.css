@@ -258,3 +258,16 @@
 
 /* this was in the glass panels /stuff */
 /* rounded-[calc(var(--radius)+8px)] */
+
+
+
+         /* ===== LOADING SCREEN ===== */
+#loader {
+  position: fixed; inset: 0; background: #0a0f1e; z-index: 9999;color:white;
+  display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 16px;
+}
+.loader-logo { font-size: 32px; font-weight: 800; }
+.loader-logo span { color: #1fe211; }
+.loader-bar { width: 200px; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.loader-fill { height: 100%; background: linear-gradient(90deg, #1fe21152, #1fe211); animation: loadFill 2.2s ease forwards; }
+@keyframes loadFill { from{width:0} to{width:100%} }

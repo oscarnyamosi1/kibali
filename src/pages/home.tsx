@@ -2,12 +2,14 @@ import { motion } from 'framer-motion';
 import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronRight, Star, Clock, Calendar, Users } from 'lucide-react';
+import Loader from '@/components/layout/Loader';
 
 import { SERVICES } from '@/lib/mockData';
 import { MENU_ITEMS } from '@/lib/mockData';
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
+      <Loader />
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
