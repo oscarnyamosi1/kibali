@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { X, ZoomIn } from 'lucide-react';
-
+const CLOUDINARY_URL = import.meta.env.VITE_CLOUDINARY_URL;
 const CATEGORIES = ["All", "Events", "Food", "Venues"];
 
 const IMAGES = [
   { id: 1, src: "/images/hero.jpg", category: "Events", title: "Gala Dinner Setup" },
-  { id: 2, src: "/images/wedding.jpg", category: "Venues", title: "Outdoor Reception" },
+  { id: 2, src: `${CLOUDINARY_URL}/wedding_qoa5tx.jpg`, category: "Venues", title: "Outdoor Reception" },
   { id: 3, src: "/images/corporate.jpg", category: "Events", title: "Corporate Buffet" },
   { id: 4, src: "/images/dish-stew.jpg", category: "Food", title: "Slow Braised Stew" },
   { id: 5, src: "/images/dish-appetizers.jpg", category: "Food", title: "Canapés" },
