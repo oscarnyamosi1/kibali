@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Award, Heart, Leaf, Star } from 'lucide-react';
 
-const imagePrefix = import.meta.env.VITE_CLOUDINARY_PREFIX
+const imagePrefix = import.meta.env.VITE_CLOUDINARY_URL;
 
 export default function AboutPage() {
   return (
@@ -31,7 +31,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="glass p-2 rounded-[2rem] relative"
           >
-            <img src={`${imagePrefix}/images/kibali.jpg` } alt="Our culinary approach" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
+            <img src={`${imagePrefix}/kibali_fq0qeh.jpg` } alt="Our culinary approach" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
           </motion.div>
 
         <motion.div 
@@ -40,7 +40,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="glass p-2 rounded-[2rem] relative"
           >
-            <img src={`${imagePrefix}/images/kibali2.jpg` } alt="mr . kibali" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
+            <img src={`${imagePrefix}/kibali2_i4tkyw.jpg` } alt="mr . kibali" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
           </motion.div>
 
                   <motion.div 
@@ -49,7 +49,7 @@ export default function AboutPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="glass p-2 rounded-[2rem] relative"
           >
-            <img src={`${imagePrefix}/images/hero.jpg` }alt="mr . kibali" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
+            <img src={'/images/hero.jpg' }alt="mr . kibali" className="rounded-[1.5rem] w-full aspect-square md:aspect-[4/5] object-cover" />
           </motion.div>
         </div>
       </section>

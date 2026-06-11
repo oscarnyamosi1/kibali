@@ -7,17 +7,7 @@ import { Input } from '@/components/ui/input';
 
 const MENU_CATEGORIES = ['All', 'Appetizers', 'Mains', 'Desserts', 'Beverages'];
 
-const MENU_ITEMS = [
-  { id: 1, name: "All sorts of Pilau", category: "Appetizers", price: "Shs 2800", description: "Crispy plantain tostones topped with crème fraîche and sustainable ossetra caviar.", tags: ["gluten-free"], img: "/images/dish-appetizers.jpg" },
-  { id: 2, name: "Nyama Choma", category: "Appetizers", price: "Shs 3200", description: "Pan-seared diver scallops with a spicy suya peanut glaze and micro cilantro.", tags: ["halal"], img: "/images/dish-appetizers.jpg" },
-  { id: 3, name: "Vegetable Rice", category: "Mains", price: "Shs 4500", description: "Oxtail braised for 12 hours in rich tomato and butter bean sauce, served with root mash.", tags: ["halal", "gluten-free"], img: "/images/dish-stew.jpg" },
-  { id: 4, name: "Local Delicacies (eg. Managu)", category: "Mains", price: "Shs 3800", description: "Arborio rice cooked in smoky jollof broth with charred bell peppers and king prawns.", tags: ["halal", "gluten-free"], img: "/images/dish-stew.jpg" },
-  { id: 5, name: "(`Ebusaa`) Kisii Beer", category: "Mains", price: "Shs 3400", description: "Roasted baby eggplants stuffed with melon seed stew and wild mushrooms.", tags: ["vegan", "gluten-free"], img: "/images/dish-stew.jpg" },
-  { id: 6, name: "Matoke", category: "Dessert", price: "KSH 1800", description: "Zobo (hibiscus) infused curd in a shortbread shell with torched meringue.", tags: ["vegetarian"], img: "/images/dish-dessert.jpg" },
-  { id: 7, name: "Pumpkin Chapati", category: "Dessert", price: "Shs 2200", description: "Silky panna cotta infused with baobab powder, topped with passion fruit coulis.", tags: ["gluten-free", "vegetarian"], img: "/images/dish-dessert.jpg" },
-  { id: 8, name: "Signature Zobo Blend", category: "Beverages", price: "Ksh1200", description: "Chilled hibiscus tea with ginger, cloves, and a splash of sparkling water.", tags: ["vegan", "gluten-free"], img: "/images/beverage.jpg" },
-  { id: 9, name: "Palm Wine Spritz", category: "Beverages", price: "Ksh 1500", description: "Fresh palm wine mixed with prosecco and a twist of lime.", tags: ["gluten-free"], img: "/images/beverage.jpg" }
-];
+import { MENU_ITEMS } from '@/lib/mockData';
 
 export default function MenuPage() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -89,9 +79,9 @@ export default function MenuPage() {
                     alt={item.name} 
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
-                  <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full text-sm font-mono font-medium shadow-sm">
+                  {/* <div className="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full text-sm font-mono font-medium shadow-sm">
                     {item.price}
-                  </div>
+                  </div> */}
                 </div>
                 <div className="p-6 flex-1 flex flex-col">
                   <div className="flex justify-between items-start mb-2">

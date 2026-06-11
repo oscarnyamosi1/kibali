@@ -9,12 +9,12 @@ const CATEGORIES = ["All", "Events", "Food", "Venues"];
 const IMAGES = [
   { id: 1, src: "/images/hero.jpg", category: "Events", title: "Gala Dinner Setup" },
   { id: 2, src: `${CLOUDINARY_URL}/wedding_qoa5tx.jpg`, category: "Venues", title: "Outdoor Reception" },
-  { id: 3, src: "/images/corporate.jpg", category: "Events", title: "Corporate Buffet" },
-  { id: 4, src: "/images/dish-stew.jpg", category: "Food", title: "Slow Braised Stew" },
-  { id: 5, src: "/images/dish-appetizers.jpg", category: "Food", title: "Canapés" },
-  { id: 6, src: "/images/gallery-table.jpg", category: "Venues", title: "Intimate Dining" },
-  { id: 7, src: "/images/dish-dessert.jpg", category: "Food", title: "Artisanal Dessert" },
-  { id: 8, src: "/images/beverage.jpg", category: "Food", title: "Signature Drinks" },
+  { id: 3, src: `${CLOUDINARY_URL}/corporate_fjolag.jpg`, category: "Events", title: "Corporate Buffet" },
+  { id: 4, src: `${CLOUDINARY_URL}/dish-stew_lmh6cd.jpg`, category: "Food", title: "Slow Braised Stew" },
+  { id: 5, src: `${CLOUDINARY_URL}/unnamed_4_tuk9az.jpg`, category: "Food", title: "Appetizer" },
+  { id: 6, src: `${CLOUDINARY_URL}/unnamed_3_gfoeca.jpg`, category: "Venues", title: "Intimate Dining" },
+  { id: 7, src: `${CLOUDINARY_URL}/unnamed_11_oamiov.jpg`, category: "Food", title: "Artisanal Dessert" },
+  { id: 8, src: `${CLOUDINARY_URL}/unnamed_12_q7qjxj.jpg`, category: "Food", title: "Signature Drinks" },
 ];
 
 export default function GalleryPage() {

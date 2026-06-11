@@ -103,7 +103,7 @@ export function Navbar() {
                   </Button>
                 </div>
               ) : (
-                <div className="flex items-center space-x-2">
+                <div styles={{display:"None"}} className="flex items-center space-x-2">
                   <Button variant="ghost" className="rounded-full" asChild>
                     <Link href="/login">Log In</Link>
                   </Button>

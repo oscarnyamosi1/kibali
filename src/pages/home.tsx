@@ -3,6 +3,8 @@ import { Link } from 'wouter';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronRight, Star, Clock, Calendar, Users } from 'lucide-react';
 
+import { SERVICES } from '@/lib/mockData';
+import { MENU_ITEMS } from '@/lib/mockData';
 export default function Home() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
@@ -57,7 +59,7 @@ export default function Home() {
               className="relative"
             >
               <div className="aspect-[4/5] rounded-3xl overflow-hidden glass-card-round p-2 relative z-10">
-                <img src="/images/gallery-table.jpg" alt="Fine dining table" className="w-full h-full object-cover rounded-[calc(var(--radius)+4px)]" />
+                <img src="https://res.cloudinary.com/dw0l7b86h/image/upload/v1780941153/beverage_cico6a.jpg" alt="Fine dining table" className="w-full h-full object-cover rounded-[calc(var(--radius)+4px)]" />
               </div>
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl -z-10" />
             </motion.div>
@@ -93,23 +95,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Weddings",
-                desc: "Elegant receptions, rehearsal dinners, and magnificent banquets.",
-                img: "/images/wedding.jpg"
-              },
-              {
-                title: "Corporate Events",
-                desc: "Impress clients and reward teams with sophisticated menus.",
-                img: "/images/corporate.jpg"
-              },
-              {
-                title: "Private Parties",
-                desc: "Intimate chef-driven experiences in the comfort of your venue.",
-                img: "/images/gallery-table.jpg"
-              }
-            ].map((service, i) => (
+            {SERVICES.map((service, i) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -124,7 +110,7 @@ export default function Home() {
                   </div>
                   <div className="p-8 flex-1 flex flex-col">
                     <h3 className="font-serif text-2xl mb-3">{service.title}</h3>
-                    <p className="text-muted-foreground mb-6 flex-1">{service.desc}</p>
+                    <p className="text-muted-foreground mb-6 flex-1">{service.description}</p>
                     <Link href="/services" className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors">
                       Discover <ChevronRight className="ml-1 w-4 h-4" />
                     </Link>
@@ -150,12 +136,7 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { name: "Slow-Braised Oxtail", category: "Main", price: "Ksh 4500", img: "/images/dish-stew.jpg" },
-              { name: "Plantain & Caviar", category: "Appetizer", price: "Ksh 2800", img: "/images/dish-appetizers.jpg" },
-              { name: "Spiced Hibiscus Tart", category: "Dessert", price: "KSH 1800", img: "/images/dish-dessert.jpg" },
-              { name: "Signature Zobo Blend", category: "Beverage", price: "Ksh 1200", img: "/images/beverage.jpg" },
-            ].map((item, i) => (
+            {MENU_ITEMS.slice(0, 4).map((item, i) => (
               <motion.div
                 key={item.name}
                 initial={{ opacity: 0, scale: 0.95 }}
@@ -171,7 +152,7 @@ export default function Home() {
                   <span className="text-xs font-medium text-primary uppercase tracking-wider mb-2 block">{item.category}</span>
                   <div className="flex justify-between items-start gap-4">
                     <h4 className="font-serif text-lg leading-tight">{item.name}</h4>
-                    <span className="font-mono text-muted-foreground">{item.price}</span>
+                    {/* <span className="font-mono text-muted-foreground">{item.price}</span> */}
                   </div>
                 </div>
               </motion.div>
