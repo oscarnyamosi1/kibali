@@ -39,14 +39,53 @@ export default function ContactPage() {
     }
   });
 
-  const onSubmit = async (data: z.infer<typeof contactSchema>) => {
-    setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(r => setTimeout(r, 1000));
-    toast.success("Message sent successfully! We'll be in touch shortly.");
+  // const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+  //   setIsSubmitting(true);
+  //   // Simulate API call
+  //   await new Promise(r => setTimeout(r, 1000));
+  //   toast.success("Message sent successfully! We'll be in touch shortly.");
+  //   form.reset();
+  //   setIsSubmitting(false);
+  // };
+
+
+
+const onSubmit = async (data: z.infer<typeof contactSchema>) => {
+  setIsSubmitting(true);
+
+  try {
+    const whatsappNumber = "254795404843";
+
+    const fullMessage = `
+*New Contact Form Message*
+
+🏷 Name: ${data.name}
+📧 Email: ${data.email}
+📞 Phone: ${data.phone}
+📌 Subject: ${data.subject}
+
+💬 Message:
+${data.message}
+`.trim();
+
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
+
+    // small delay for UX (optional)
+    await new Promise((r) => setTimeout(r, 500));
+
+    window.open(url, "_blank");
+
+    toast.success("Redirecting you to WhatsApp...");
+
     form.reset();
+  } catch (err) {
+    toast.error("Failed to open WhatsApp");
+  } finally {
     setIsSubmitting(false);
-  };
+  }
+};
+
+
 
   return (
     <div className="pt-24 pb-20 min-h-screen">
